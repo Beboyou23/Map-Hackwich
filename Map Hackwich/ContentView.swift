@@ -35,7 +35,7 @@ struct ContentView: View {
                 Marker(name: place.name)
             }
             }
-        .onAppear(perform:{
+        .onAppear(perform: {
             findLocation(name: "Springfield")
         })
     }
@@ -47,7 +47,7 @@ struct ContentView: View {
                 return
             }
             for placemark in placemarks! {
-                let place = Place(name: "\(placemark.name!),\(placemark.administrativeArea)",
+                let place = Place(name: "\(placemark.name!),\(placemark.administrativeArea!)",
                                   coordinate: placemark.location!.coordinate)
                 places.append(place)
             }
